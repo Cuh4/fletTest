@@ -36,51 +36,51 @@ def main(page: flet.Page):
     
     # Components
     title = flet.Text(
-        value="Simple Counter",
-        text_align=flet.TextAlign.CENTER,
-        size=25,
+        value = "Simple Counter",
+        text_align = flet.TextAlign.CENTER,
+        size = 25,
 
-        style=flet.TextStyle(
-            weight=flet.FontWeight.BOLD,
-            font_family="Montserrat"
+        style = flet.TextStyle(
+            weight = flet.FontWeight.BOLD,
+            font_family = "Montserrat"
         )
     )
     
     author = flet.Text(
-        value="By Cuh4",
-        text_align=flet.TextAlign.CENTER,
-        size=10,
+        value = "By Cuh4",
+        text_align = flet.TextAlign.CENTER,
+        size = 10,
 
-        style=flet.TextStyle(
-            font_family="Montserrat"
+        style = flet.TextStyle(
+            font_family = "Montserrat"
         )
     )
     
     count = flet.TextField(
-        value="0",
-        text_align=flet.TextAlign.CENTER,
-        width=100,
-        border_color=flet.colors.WHITE,
-        text_size=25,
+        value = "0",
+        text_align = flet.TextAlign.CENTER,
+        width = 100,
+        border_color = flet.colors.WHITE,
+        text_size = 25,
 
-        text_style=flet.TextStyle(
-            weight=flet.FontWeight.BOLD,
-            font_family="Montserrat"
+        text_style = flet.TextStyle(
+            weight = flet.FontWeight.BOLD,
+            font_family = "Montserrat"
         )
     )
 
     subtractButton = flet.IconButton(
-        icon=flet.icons.REMOVE,
-        tooltip="Subtract",
-        on_click=subtractHandler,
-        icon_color=flet.colors.RED_200
+        icon = flet.icons.REMOVE,
+        tooltip = "Subtract",
+        on_click = subtractHandler,
+        icon_color = flet.colors.RED_200
     )
     
     addButton = flet.IconButton(
-        icon=flet.icons.ADD,
+        icon = flet.icons.ADD,
         tooltip = "Add",
-        on_click=addHandler,
-        icon_color=flet.colors.LIGHT_GREEN_200
+        on_click = addHandler,
+        icon_color = flet.colors.LIGHT_GREEN_200
     )
     
     # // Finalization
@@ -95,6 +95,6 @@ def main(page: flet.Page):
                 addButton
             ],
 
-            alignment=flet.MainAxisAlignment.CENTER
+            alignment = flet.MainAxisAlignment.CENTER
         )
     )
