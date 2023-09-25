@@ -75,6 +75,7 @@ def main(page: flet.Page):
     page.add(
         flet.Stack(
             [
+                # background
                 flet.Container(
                     image_src = "images/background.png",
                     image_fit = flet.ImageFit.COVER,
@@ -84,12 +85,14 @@ def main(page: flet.Page):
                     height = page.window_height,
                 ),
                 
+                # banner at top
                 flet.Container(
                     bgcolor = modules.misc.RGBToHex(5, 5, 5),
                     opacity = 0.8,
                     height = 40
                 ),
                 
+                # icon, title, author (above banner)
                 flet.Row(
                     [
                         iconImage,
@@ -101,6 +104,7 @@ def main(page: flet.Page):
                     height = 40
                 ),
                 
+                # launch sw button (below banner)
                 flet.Row(
                     [
                         launchButton
