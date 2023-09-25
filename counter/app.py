@@ -12,11 +12,17 @@ def main(page: flet.Page):
     # // Handlers
     # Add Button
     def addHandler(button: flet.IconButton):
+        if not count.value.isnumeric():
+            count.value = "0"
+        
         count.value = str(int(count.value) + 1)
         page.update()
     
     # Subtract Button 
     def subtractHandler(button: flet.IconButton):
+        if not count.value.isnumeric():
+            count.value = "0"
+        
         count.value = str(int(count.value) - 1)
         page.update()
     
@@ -62,6 +68,8 @@ def main(page: flet.Page):
         width = 100,
         border_color = flet.colors.WHITE,
         text_size = 25,
+        multiline = False,
+        shift_enter = False,
 
         text_style = flet.TextStyle(
             weight = flet.FontWeight.BOLD,
