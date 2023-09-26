@@ -7,8 +7,6 @@ import flet
 import modules
 import webbrowser
 
-# -- // Variables
-
 # -- // GUI
 def main(page: flet.Page):
     # // Handlers
@@ -82,28 +80,27 @@ def main(page: flet.Page):
                     expand = True,
 
                     width = page.window_width,
-                    height = page.window_height,
+                    height = page.window_height
                 ),
                 
                 # banner at top
                 flet.Container(
                     bgcolor = modules.misc.RGBToHex(5, 5, 5),
                     opacity = 0.8,
-                    height = 40
-                ),
-                
-                # icon, title, author (above banner)
-                flet.Row(
-                    [
-                        iconImage,
-                        titleText,
-                        authorText,
-                    ],
+                    height = 40,
                     
-                    alignment = flet.MainAxisAlignment.CENTER,
-                    height = 40
+                    # title, etc, in banner
+                    content = flet.Row(
+                        [
+                            iconImage,
+                            titleText,
+                            authorText,
+                        ],
+                        
+                        alignment = flet.MainAxisAlignment.CENTER
+                    )
                 ),
-                
+
                 # launch sw button (below banner)
                 flet.Row(
                     [
